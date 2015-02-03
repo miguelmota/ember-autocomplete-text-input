@@ -1,0 +1,17 @@
+{
+  "name": "ember-autocomplete-text-input",
+  "version": "0.0.1",
+  "homepage": "https://github.com/miguelmota/ember-autocomplete-text-input",
+  "main": "ember-select-dropdown.js",
+  "authors": [
+    "Miguel Mota <miguelmota2@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

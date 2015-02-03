@@ -1,0 +1,36 @@
+.autocomplete-text-input,
+.autocomplete-text-input * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.autocomplete-text-input {
+  max-width: 500px;
+}
+.autocomplete-text-input .container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 45px;
+}
+.autocomplete-text-input .input {
+  z-index: 2;
+  background: transparent;
+  color: #000;
+}
+.autocomplete-text-input .shadow-input {
+  z-index: 1;
+  background: #fff;
+  color: #ccc;
+}
+.autocomplete-text-input .input,
+.autocomplete-text-input .shadow-input {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
