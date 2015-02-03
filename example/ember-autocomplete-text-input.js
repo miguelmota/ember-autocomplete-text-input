@@ -4,15 +4,16 @@ App.AutocompleteTextInputComponent = Ember.Component.extend({
   attributeBindings: [
     'value',
     'type',
-    'shadowValue',
     'data',
+    'shadowValue',
     'shadowAfter'
   ],
 
   value: null,
-  shadowValue: null,
+  type: 'text',
   data: [],
-  beginAfter: null,
+  shadowValue: null,
+  shadowAfter: null,
 
   didInsertElement: function() {
     this.keyUp();
