@@ -15,6 +15,11 @@ App.AutocompleteTextInputComponent = Ember.Component.extend({
   shadowValue: null,
   shadowAfter: null,
 
+  keys: {
+    ENTER: 13,
+    TAB: 9
+  },
+
   didInsertElement: function() {
     this.keyUp();
   },
@@ -26,16 +31,23 @@ App.AutocompleteTextInputComponent = Ember.Component.extend({
     })[0] || '';
   },
 
+  keyDown: function(e) {
+    e = e || {};
+
+    var code = e.keyCode || e.which;
+    var keys = this.get('keys');
+
+    if (code === keys.TAB) {
+      this.set('value', this.get('shadowValue'));
+      this.sendAction('action', this.get('value'));
+    }
+  },
+
   keyUp: function(e) {
     e = e || {};
 
-    var keys = {
-      ENTER: 13,
-      TAB: 9
-    };
-
     var code = e.keyCode || e.which;
-
+    var keys = this.get('keys');
     var value = this.get('value') || '';
     var shadowAfter = this.get('shadowAfter');
     var shadowValue = '';
@@ -52,9 +64,8 @@ App.AutocompleteTextInputComponent = Ember.Component.extend({
 
     this.set('shadowValue', shadowValue);
 
-    if (code === keys.ENTER || code === keys.TAB) {
-      this.set('value', shadowValue);
-      e.preventDefault();
+    if (code === keys.ENTER) {
+      this.set('value', this.get('shadowValue'));
       this.sendAction('action', this.get('value'));
     }
   },
