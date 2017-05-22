@@ -1,8 +1,8 @@
 # Ember Autocomplete Text Input
 
-#Demo
+# Demo
 
-**[http://lab.moogs.io/ember-autocomplete-text-input](http://lab.moogs.io/ember-autocomplete-text-input)**
+**[https://lab.miguelmota.com/ember-autocomplete-text-input](https://lab.miguelmota.com/ember-autocomplete-text-input)**
 
 # Usage
 
